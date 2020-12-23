@@ -1,0 +1,24 @@
+
+START Event Log / MDaemon PRO v20.0.3, IMAP log information
+-------------------------------------------------------------------------------
+Event Time/Date             Event Description
+-------------------------------------------------------------------------------
+Sat 2020-12-19 00:00:56.086: 01: --------- Partial transcript, remainder will follow.
+Sat 2020-12-19 00:00:55.966: 05: Session 01679400; child 0004
+Sat 2020-12-19 00:00:55.966: 05: Accepting IMAP connection from 192.168.1.163:56117 to 192.168.1.25:993
+Sat 2020-12-19 00:00:55.969: 01: SSL negotiation successful (TLS 1.2, 256 bit key exchange, 256 bit AES encryption)
+Sat 2020-12-19 00:00:55.969: 03: --> * OK mail.ruddwisdom.com IMAP4rev1 ready
+Sat 2020-12-19 00:00:55.977: 02: <-- 2ubi CAPABILITY
+Sat 2020-12-19 00:00:55.966: 05: Session 0167941; child 0005
+Sat 2020-12-19 00:00:55.969: 01: SSL negotiation successful (TLS 1.2, 256 bit key exchange, 256 bit AES encryption)
+Sat 2020-12-19 00:00:55.969: 03: --> * OK mail.ruddwisdom.com IMAP4rev1 ready
+Sat 2020-12-19 00:00:55.977: 02: <-- 2ubi CAPABILITY
+Sat 2020-12-19 00:00:56.086: 01: ---------- End partial transcript.
+Sat 2020-12-19 00:00:56.086: 01: --------- Partial transcript, remainder will follow.
+Sat 2020-12-19 00:00:55.969: 01: SSL negotiation successful (TLS 1.2, 256 bit key exchange, 256 bit AES encryption)
+Sat 2020-12-19 00:00:55.969: 03: --> * OK mail.ruddwisdom.com IMAP4rev1 ready
+Sat 2020-12-19 00:00:55.977: 02: <-- 2ubi CAPABILITYSat 2020-12-19 00:00:55.966: 05: Accepting IMAP connection from 192.168.1.163:56117 to 192.168.1.25:993
+"Sat 2020-12-19 00:00:55.966: 05: Accepting IMAP connection from 192.168.1.163:56117 to 192.168.1.25:993" 
+"Sat 2020-12-19 00:00:55.966: 05: Accepting IMAP connection from 192.168.1.163:56117 to 192.168.1.25:993" 
+"Sat 2020-12-19 00:00:55.966: 05: Accepting IMAP connection from 192.168.1.163:56117 to 192.168.1.25:993" 
+"Sat 2020-12-19 00:00:55.966: 05: Accepting IMAP connection from 192.168.1.163:56117 to 192.168.1.25:993" 
