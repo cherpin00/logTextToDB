@@ -3,6 +3,7 @@ START Event Log / MDaemon PRO v20.0.3, IMAP log information
 -------------------------------------------------------------------------------
 Event Time/Date             Event Description
 -------------------------------------------------------------------------------
+
 Sat 2020-12-19 00:00:56.086: 01: --------- Partial transcript, remainder will follow.
 Sat 2020-12-19 00:00:55.966: 05: Session 01679400; child 0004
 Sat 2020-12-19 00:00:55.966: 05: Accepting IMAP connection from 192.168.1.163:56117 to 192.168.1.25:993
