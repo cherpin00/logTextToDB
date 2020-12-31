@@ -2,12 +2,17 @@ import os
 import signal
 import sys
 import multiprocessing as mp
+import threading
+import subprocess
 import logging
 import sqlite3
 import queue
 import argparse
+from time import sleep
 
 import tailer
+
+import pytail
 
 G_TBL_NAME = "tblLog"
 
@@ -176,8 +181,24 @@ def create_table(database, delete_first = False):
     conn.commit()
 
 
-if __name__ == "__main__":
+def tail_process(write_pipe):
+    # sys.stdout=pipe
+    pytail.main("x.log", 5, False, out=os.fdopen(write_pipe[1], "w"))
 
+def log_process(read_pipe):
+    # while True:
+    f = os.fdopen(read_pipe[0], 'r')
+
+if __name__ == "__main__":
+    # com = os.pipe()
+    # tail = threading.Thread(target=tail_process, args=(com, ))
+    # log = threading.Thread(target=log_process, args=(com, ))
+    # tail.start()
+    # log.start()
+
+
+
+    # exit()
     parser=argparse.ArgumentParser()
     tableOption=parser.add_mutually_exclusive_group()
     parser.add_argument("--filein")
@@ -203,8 +224,8 @@ if __name__ == "__main__":
     else:
         database = args.fileout
 
-    print(args)
-    print(database)
+    print("args",args)
+    print("Database:",database)
 
     # database = ":memory:" //todo: Why doesn't in memory database work.  It returns no such table tblLog even after tblLog is created
     create_table(database, delete_first=False)  #only create the table if it doesn't exist

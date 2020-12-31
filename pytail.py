@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 
 import argparse
 import os
@@ -95,13 +95,13 @@ def dos2mac2(filein, fileout):
     with open(fileout, "rb") as f:
         print(f.read())
 
-def main():
-    args = get_input_args()
-
-    full_file_path = os.path.join(os.path.join(os.path.abspath(os.path.dirname(__file__)), args.file_path))
+def main(file_path, num_lines, follow, out=sys.stdout):
+    
+    sys.stdout = out
+    full_file_path = os.path.join(os.path.join(os.path.abspath(os.path.dirname(__file__)), file_path))
 
     with open(full_file_path, 'br') as f:   #read as bytes so python doesn't auto-convert line-endings
-        tail_from(f, int(args.num_lines))
+        tail_from(f, int(num_lines))
         # shutil.copyfileobj(f, sys.stdout)
         line1=""
         for line in f:
@@ -110,12 +110,11 @@ def main():
         if line1.decode()[-1]!="\n" and line1.decode()[-1]!="\r":
             print(flush=True)
 
-    if args.follow:
+    if follow:
         for line in tailer.follow(open(full_file_path),.1):
             print(line, flush=True)
 
 
 if __name__ == "__main__":
-    # dos2mac("x.log", "x_mac.log")
-    # dos2mac2("x.log", "x_mac.log")
-    main()
+    args = get_input_args()
+    main(args.file_path, args.num_lines, args.follow)
