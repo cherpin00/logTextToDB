@@ -52,7 +52,8 @@ def tail_from(f, num_lines):
     :return: nothing; instead sets the file cursor to the point to tail from
     """
     # Seek to end of file, reading from here will give us '', so we'll start our loop by backing up 1 char
-    f.seek(0, os.SEEK_END)
+    if num_lines != -1:
+        f.seek(0, os.SEEK_END)
 
     # While there is still a positive number of lines to tail and we're not at the beginning of the file,
     # move the cursor back one character, read that character and check to see if it is a line separator.
@@ -117,4 +118,6 @@ def main(file_path, num_lines, follow, out=sys.stdout):
 
 if __name__ == "__main__":
     args = get_input_args()
+    print("pytail args",args)
+
     main(args.file_path, args.num_lines, args.follow)

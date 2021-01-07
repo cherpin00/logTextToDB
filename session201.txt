@@ -1,0 +1,23 @@
+
+--attempt login 2 times about 1 hours apart with same IP Address, different usernames.
+
+START Event Log / MDaemon PRO v20.0.3, IMAP log information
+-------------------------------------------------------------------------------
+Event Time/Date             Event Description
+-------------------------------------------------------------------------------
+Sat 2020-12-19 00:34:57.693: 05: Session 201; child 0004
+Sat 2020-12-19 00:34:57.693: 05: Accepting IMAP connection from 1.1.1.2:59032 to 192.168.1.25:143
+Sat 2020-12-19 00:35:07.098: 01: Authenticating ajansen@ruddwisdom.com...
+Sat 2020-12-19 00:35:07.098: 04: Account does not exist
+Sat 2020-12-19 00:35:07.100: 03: --> 2 NO AUTHENTICATE failed
+Sat 2020-12-19 00:35:08.250: 05: Socket connection closed by the other side (how rude!)
+Sat 2020-12-19 00:35:08.250: 01: IMAP session terminated, (Bytes in/out: 98/248)
+Sat 2020-12-19 00:35:08.251: 01: ----------
+Sat 2020-12-20 00:34:57.693: 05: Session 202; child 0004
+Sat 2020-12-20 00:34:57.693: 05: Accepting IMAP connection from 1.1.1.2:59032 to 192.168.1.25:143
+Sat 2020-12-20 00:35:07.098: 01: Authenticating ajansen2@ruddwisdom.com...
+Sat 2020-12-20 00:35:07.098: 04: Account does not exist
+Sat 2020-12-20 00:35:07.100: 03: --> 2 NO AUTHENTICATE failed
+Sat 2020-12-20 00:35:08.250: 05: Socket connection closed by the other side (how rude!)
+Sat 2020-12-20 00:35:08.250: 01: IMAP session terminated, (Bytes in/out: 98/248)
+Sat 2020-12-20 200:35:08.251: 01: ----------
